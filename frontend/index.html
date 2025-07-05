@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    
+
+
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div id="tsparticles" class="absolute inset-0 -z-10"></div>
+    <div class="w-full max-w-screen-xl px-8 py-6 mx-auto">
+        
+            <div class="bg-white rounded-lg shadow-md overflow-y-auto min-h-[90vh] max-h-[95vh]">
+                <!-- Header -->
+             <div class="bg-green-600 py-5 px-4">
+                    <h1 id="header-title" class="text-2xl font-bold text-white text-center">Perfil do Usuário </h1>
+             </div>
+                
+                <!-- Conteúdo do perfil -->
+                <div class="p-9 bg-gray-100">
+                  
+                    <div id="view-mode" >
+                        <div class="flex flex-col md:flex-row gap-8">
+                            <!-- Coluna da esquerda (foto do perfil) -->
+                            <div class="md:w-1/3 flex flex-col items-center">
+                                <div class="profile-pic-upload mb-4">
+                                    <img id="profile-pic" src="" alt="Profile Picture">
+                                </div>
+                                <button id="edit-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">
+                                   Editar perfil
+                                </button>
+                            </div>
+                            
+                            <!-- Coluna da direita (informações do perfil) -->
+                            <div class="md:w-2/3">
+                                <div class="mb-6">
+                                    <h2 class="text-xl font-bold text-gray-800" id="view-name">Paulo Vilela</h2>
+                                    <p class="text-gray-600" id="view-age">22 anos</p>
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Endereço</h3>
+                                    <p class="text-gray-600" id="view-address"></p>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Biografia</h3>
+                                    <p class="text-gray-600" id="view-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Forms de Edição -->
+                    <div id="edit-mode" class="hidden">
+
+                        <form id="profile-form">
+                            <div class="flex flex-col md:flex-row gap-7">
+                                <!-- Coluna da esquerda (foto do perfil) -->
+                                <div class="md:w-1/3 flex flex-col items-center">
+                                    <div class="profile-pic-upload mb-4">
+                                        <label for="profile-pic-input">
+                                            <img id="edit-profile-pic" src="" alt="Profile Picture">
+                                            <div class="edit-icon">
+                                                <i class="fas fa-camera"></i>
+                                            </div>
+                                        </label>
+                                        <input type="file" id="profile-pic-input" accept="image/*">
+                                    </div>
+                                </div>
+                                
+                                <!-- Coluna da direita (informações do perfil) -->
+                                <div class="md:w-2/3">
+                                    <div class="mb-6">
+                                        <label for="full-name" class="block text-gray-700 font-medium mb-2">Nome completo</label>
+                                        <input type="text" id="nome-completo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="" required>
+                                    </div>
+                                    
+                                    <div class="mb-6">
+                                        <label for="age" class="block text-gray-700 font-medium mb-2">Idade</label>
+                                        <input type="number" id="age" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="" required>
+                                    </div>
+                                    
+                                    <div class="mb-6">
+                                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Endereço</h3>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <div>
+                                                <label for="street" class="block text-gray-700 font-medium mb-2">Rua</label>
+                                                <input type="text" id="street" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="" required>
+                                            </div>
+                                            <div>
+                                                <label for="neighborhood" class="block text-gray-700 font-medium mb-2">Bairro</label>
+                                                <input type="text" id="neighborhood" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="" required>
+                                            </div>
+                                            <div>
+                                                <label for="state" class="block text-gray-700 font-medium mb-2">Estado</label>
+                                                <input type="text" id="state" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-6">
+                                        <label for="bio" class="block text-gray-700 font-medium mb-2">Bio</label>
+                                        <textarea id="bio" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bio-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</textarea>
+                                    </div>
+                                    
+                                    <div class="flex justify-end gap-4">
+                                        <button type="button" id="cancel-btn" class="bg-red-500 hover:bg-red-400 text-gray-800 font-medium py-2 px-6 rounded-full transition duration-300">
+                                            Cancelar
+                                        </button>
+                                        <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-full transition duration-300">
+                                            Salvar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+    
+   <script src="js/script.js"></script>
+</body>
+</html>
