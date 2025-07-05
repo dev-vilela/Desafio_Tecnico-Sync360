@@ -12,8 +12,8 @@ Este projeto é um sistema completo de cadastro e edição de perfil de usuário
 
 ## 📸 Tela do projeto
 
- <img src="img/perfil.png" alt="">
- <img src="img/edicao.png" alt="">
+ <img src="/frontend/img/perfil.png" alt="">
+ <img src="/frontend/img/edicao.png" alt="">
 
 ---
 
@@ -40,14 +40,15 @@ Este projeto é um sistema completo de cadastro e edição de perfil de usuário
 
 ## 📁 Estrutura de Pastas
 
-USER-PROFILE-APP/
+```
+USER-PROFILE-APP/ 
 ├── backend/
 │   ├── uploads/               # Imagens salvas via multer
 │   ├── db.js                  # Conexão com o banco de dados MySQL
 │   ├── server.js              # Servidor Express e rotas da API
 ├── frontend/
 │   ├── css/
-│   │   └── style.css          # Estilos customizados (opcional, pois usa Tailwind)
+│   │   └── style.css          # Estilos customizados
 │   ├── js/
 │   │   └── script.js          # Scripts JS do frontend (fetch API, DOM)
 │   └── index.html             # Interface principal com Tailwind
@@ -69,7 +70,8 @@ USER-PROFILE-APP/
 
 ### 1. Clone o projeto
 
-```bash
+```
+bash
 git clone https://github.com/dev-vilela/Desafio_Tecnico-Sync360.git
 cd nome-do-repo
 ```
