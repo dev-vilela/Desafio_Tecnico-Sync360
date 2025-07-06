@@ -12,8 +12,8 @@ Este projeto é um sistema completo de cadastro e edição de perfil de usuário
 
 ## 📸 Tela do projeto
 
- <img src="/frontend/img/perfil.png" alt="">
- <img src="/frontend/img/edicao.png" alt="">
+ <img src="/frontend/img/perfil01.png" alt="">
+ <img src="/frontend/img/perfil_edicao.png" alt="">
 
 ---
 
